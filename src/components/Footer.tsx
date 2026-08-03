@@ -1,43 +1,45 @@
+import Link from 'next/link';
+
 export default function Footer() {
   const columns = [
     {
       title: "About Zoiko Foods",
       links: [
-        "About Us",
-        "Heritage & Roots",
-        "Our Brands",
-        "Exclusive Distributorships",
-        "Culinary Journal",
+        { label: "About Us", href: "/about-us" },
+        { label: "Heritage & Roots", href: "#" },
+        { label: "Our Brands", href: "#" },
+        { label: "Exclusive Distributorships", href: "#" },
+        { label: "Culinary Journal", href: "#" },
       ],
     },
     {
       title: "Business & Partnerships",
       links: [
-        "Investor Relations",
-        "Partnership Opportunities",
-        "Become a Distributor",
-        "Global Suppliers & Farmers",
-        "Corporate Governance Portal",
-        "Whistleblower Policy",
+        { label: "Investor Relations", href: "#" },
+        { label: "Partnership Opportunities", href: "#" },
+        { label: "Become a Distributor", href: "#" },
+        { label: "Global Suppliers & Farmers", href: "#" },
+        { label: "Corporate Governance Portal", href: "#" },
+        { label: "Whistleblower Policy", href: "#" },
       ],
     },
     {
       title: "Sustainability & Responsibility",
       links: [
-        "Sustainability Commitments",
-        "2028 Packaging Roadmap",
-        "Supplier code of ethics",
-        "Net zero 2040",
-        "ESG Hub",
+        { label: "Sustainability Commitments", href: "#" },
+        { label: "2028 Packaging Roadmap", href: "#" },
+        { label: "Supplier code of ethics", href: "#" },
+        { label: "Net zero 2040", href: "#" },
+        { label: "ESG Hub", href: "#" },
       ],
     },
     {
       title: "Support & Contact",
       links: [
-        "Contact Us",
-        "Careers",
-        "FAQ & Consumer Care",
-        "Media & Press Inquiries",
+        { label: "Contact Us", href: "/contact-us" },
+        { label: "Careers", href: "#" },
+        { label: "FAQ & Consumer Care", href: "#" },
+        { label: "Media & Press Inquiries", href: "#" },
       ],
     },
   ];
@@ -101,7 +103,9 @@ export default function Footer() {
                   key={i}
                   className="text-white text-base font-normal font-[Inter]"
                 >
-                  {link}
+                  <Link href={link.href}>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
 
