@@ -48,7 +48,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           {/* Contact Button */}
           <Link
-            href="/contact"
+            href="/contact-us"
             className="bg-[#1E4538] text-white text-sm lg:text-base font-semibold px-4 py-2 lg:px-8 lg:py-3 rounded-lg shadow-[0px_1px_2px_rgba(0,0,0,0.05)] hover:bg-[#17372d] transition"
           >
             Contact Us
