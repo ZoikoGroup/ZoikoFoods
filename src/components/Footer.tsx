@@ -7,7 +7,7 @@ export default function Footer() {
       links: [
         { label: "About Us", href: "/about-us" },
         { label: "Heritage & Roots", href: "#" },
-        { label: "Our Brands", href: "#" },
+        { label: "Our Brands", href: "/our-brands" },
         { label: "Exclusive Distributorships", href: "#" },
         { label: "Culinary Journal", href: "#" },
       ],
@@ -38,7 +38,7 @@ export default function Footer() {
       links: [
         { label: "Contact Us", href: "/contact-us" },
         { label: "Careers", href: "#" },
-        { label: "FAQ & Consumer Care", href: "#" },
+        { label: "FAQ & Consumer Care", href: "/faqs&customer-support" },
         { label: "Media & Press Inquiries", href: "#" },
       ],
     },

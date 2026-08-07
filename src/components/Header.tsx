@@ -10,7 +10,7 @@ export default function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about-us", label: "About Us" },
-    { href: "/brands", label: "Our Brands" },
+    { href: "/our-brands", label: "Our Brands" },
     { href: "/heritage", label: "Heritage & Roots" },
     { href: "/journal", label: "Culinary Journal" },
     { href: "/distribution", label: "Distribution" },
@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white/95 shadow-[0px_2px_20px_rgba(0,0,0,0.10)] backdrop-blur-[5px]">
-      <div className="max-w-[1440px] h-16 mx-auto px-4 sm:px-8 lg:px-[88px] flex items-center justify-between">
+      <div className="max-w-[1440px] h-16 mx-auto px-4 py-11 sm:px-8 lg:px-[88px] flex items-center justify-between">
 
         {/* Logo */}
         <Link href="/">
@@ -49,7 +49,7 @@ export default function Header() {
           {/* Contact Button */}
           <Link
             href="/contact-us"
-            className="bg-[#1E4538] text-white text-sm lg:text-base font-semibold px-4 py-2 lg:px-8 lg:py-3 rounded-lg shadow-[0px_1px_2px_rgba(0,0,0,0.05)] hover:bg-[#17372d] transition"
+            className="bg-[#1E4538] text-white text-sm lg:text-base font-semibold w-[167px] h-[41px] flex items-center justify-center rounded-lg shadow-[0px_1px_2px_rgba(0,0,0,0.05)] hover:bg-[#17372d] transition"
           >
             Contact Us
           </Link>
