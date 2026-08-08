@@ -12,7 +12,7 @@ export default function Header() {
     { href: "/about-us", label: "About Us" },
     { href: "/our-brands", label: "Our Brands" },
     { href: "/heritage", label: "Heritage & Roots" },
-    { href: "/journal", label: "Culinary Journal" },
+    { href: "/culinary-journal", label: "Culinary Journal" },
     { href: "/distribution", label: "Distribution" },
   ];
 
