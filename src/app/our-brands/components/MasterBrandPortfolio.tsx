@@ -1,5 +1,20 @@
+type CardType = {
+  title: string;
+  desc: string;
+  mobileDesc?: string;
+};
+
+type CategoryType = {
+  title: string;
+  mobileTitle?: string;
+  subtitle: string;
+  mobileSubtitle?: string;
+  layout: string;
+  cards: CardType[];
+};
+
 export default function MasterBrandPortfolio() {
-  const categories = [
+  const categories: CategoryType[] = [
     {
       title: "QSR, Dining & Prepared Foods",
       mobileTitle: "QSR, Dining & Prepared<br />Foods",
