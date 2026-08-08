@@ -1,43 +1,45 @@
+import Link from 'next/link';
+
 export default function Footer() {
   const columns = [
     {
       title: "About Zoiko Foods",
       links: [
-        "About Us",
-        "Heritage & Roots",
-        "Our Brands",
-        "Exclusive Distributorships",
-        "Culinary Journal",
+        { label: "About Us", href: "/about-us" },
+        { label: "Heritage & Roots", href: "#" },
+        { label: "Our Brands", href: "/our-brands" },
+        { label: "Exclusive Distributorships", href: "#" },
+        { label: "Culinary Journal", href: "#" },
       ],
     },
     {
       title: "Business & Partnerships",
       links: [
-        "Investor Relations",
-        "Partnership Opportunities",
-        "Become a Distributor",
-        "Global Suppliers & Farmers",
-        "Corporate Governance Portal",
-        "Whistleblower Policy",
+        { label: "Investor Relations", href: "#" },
+        { label: "Partnership Opportunities", href: "#" },
+        { label: "Become a Distributor", href: "#" },
+        { label: "Global Suppliers & Farmers", href: "#" },
+        { label: "Corporate Governance Portal", href: "#" },
+        { label: "Whistleblower Policy", href: "#" },
       ],
     },
     {
       title: "Sustainability & Responsibility",
       links: [
-        "Sustainability Commitments",
-        "2028 Packaging Roadmap",
-        "Supplier code of ethics",
-        "Net zero 2040",
-        "ESG Hub",
+        { label: "Sustainability Commitments", href: "#" },
+        { label: "2028 Packaging Roadmap", href: "#" },
+        { label: "Supplier code of ethics", href: "#" },
+        { label: "Net zero 2040", href: "#" },
+        { label: "ESG Hub", href: "#" },
       ],
     },
     {
       title: "Support & Contact",
       links: [
-        "Contact Us",
-        "Careers",
-        "FAQ & Consumer Care",
-        "Media & Press Inquiries",
+        { label: "Contact Us", href: "/contact-us" },
+        { label: "Careers", href: "#" },
+        { label: "FAQ & Consumer Care", href: "/faqs&customer-support" },
+        { label: "Media & Press Inquiries", href: "#" },
       ],
     },
   ];
@@ -86,7 +88,7 @@ export default function Footer() {
       {/* Top Links Section */}
       <div className="max-w-[1160px] mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-10 py-10 lg:py-12 px-4 xl:px-0">
 
-        {columns.map((col,index)=>(
+        {columns.map((col, index) => (
           <div key={index}>
 
             <h3 className="text-[#D79247] text-base font-bold font-[Georgia] lg:whitespace-nowrap lg:border-b-2 lg:border-[#D79247] lg:pb-3 lg:mb-6">
@@ -96,12 +98,14 @@ export default function Footer() {
 
             <ul className="space-y-5 hidden lg:block">
 
-              {col.links.map((link,i)=>(
+              {col.links.map((link, i) => (
                 <li
-                key={i}
-                className="text-white text-base font-normal font-[Inter]"
+                  key={i}
+                  className="text-white text-base font-normal font-[Inter]"
                 >
-                  {link}
+                  <Link href={link.href}>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
 
@@ -131,9 +135,9 @@ export default function Footer() {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 mt-8">
 
               <input
-              type="email"
-              placeholder="Enter your email address"
-              className="w-full sm:w-80 h-12 rounded-lg px-4 bg-white text-gray-700 placeholder-gray-400 border border-gray-300"
+                type="email"
+                placeholder="Enter your email address"
+                className="w-full sm:w-80 h-12 rounded-lg px-4 bg-white text-gray-700 placeholder-gray-400 border border-gray-300"
               />
 
               <button className="sm:ml-6 w-36 h-12 bg-[#D79247] rounded-lg text-white font-bold">
@@ -148,31 +152,31 @@ export default function Footer() {
 
           <div>
 
-          <h2 className="text-white text-xl font-bold font-[Georgia]">
+            <h2 className="text-white text-xl font-bold font-[Georgia]">
               Connect with us
-          </h2>
+            </h2>
 
 
-          <div className="flex gap-4 md:gap-5 mt-8 flex-wrap">
+            <div className="flex gap-4 md:gap-5 mt-8 flex-wrap">
 
-            {socials.map((social)=>(
-              <a
-              key={social.name}
-              href="#"
-              aria-label={social.name}
-              className="w-12 h-12 rounded-full bg-white flex items-center justify-center"
-              >
-                <svg
-                className="w-5 h-5 fill-[#2D5A3D]"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              {socials.map((social) => (
+                <a
+                  key={social.name}
+                  href="#"
+                  aria-label={social.name}
+                  className="w-12 h-12 rounded-full bg-white flex items-center justify-center"
                 >
-                  <path d={social.path} />
-                </svg>
-              </a>
-            ))}
+                  <svg
+                    className="w-5 h-5 fill-[#2D5A3D]"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d={social.path} />
+                  </svg>
+                </a>
+              ))}
 
-          </div>
+            </div>
 
           </div>
 
@@ -185,9 +189,11 @@ export default function Footer() {
 
 
 
+      <div className="flex flex-col">
+
       {/* Company Info */}
 
-      <div className="bg-[#396A4B] py-10 text-center px-4">
+      <div className="bg-[#396A4B] py-10 text-center px-4 order-2 md:order-1">
 
 
         <h2 className="text-white text-2xl md:text-3xl font-bold font-[Georgia]">
@@ -208,15 +214,14 @@ export default function Footer() {
         <div className="flex justify-center gap-3 md:gap-4 mt-10 flex-wrap">
 
 
-          {locations.map((location,index)=>(
+          {locations.map((location, index) => (
             <button
-            key={index}
-            className={`px-4 md:px-5 py-2 md:py-3 rounded-lg text-sm md:text-base
-            ${
-              index===0
-              ?"bg-[#D79247]"
-              :"bg-white/10"
-            }`}
+              key={index}
+              className={`px-4 md:px-5 py-2 md:py-3 rounded-lg text-sm md:text-base
+            ${index === 0
+                  ? "bg-[#D79247]"
+                  : "bg-white/10"
+                }`}
             >
               {location}
             </button>
@@ -235,10 +240,10 @@ export default function Footer() {
 
       {/* Description */}
 
-      <div className="bg-[#396A4B] py-8 text-center px-4">
+      <div className="bg-[#396A4B] py-8 text-center px-4 order-1 md:order-2">
 
 
-        <p className="max-w-5xl mx-auto text-white text-base md:text-lg font-[Georgia]">
+        <p className="max-w-5xl mx-auto text-white text-base md:text-lg font-[Georgia] italic md:not-italic">
           Zoiko Foods Corp. — A proud member of Zoiko Group Inc., delivering
           world-class foods, beverages, and culinary innovation across continents.
           Rooted in heritage. Committed to sustainability. Driven by excellence.
@@ -252,20 +257,22 @@ export default function Footer() {
 
       </div>
 
+      </div>
+
 
 
 
 
       {/* Bottom Policies */}
 
-      <div className="bg-[#396A4B] py-6 px-4 flex justify-center gap-4 md:gap-10 flex-wrap text-sm underline">
+      <div className="bg-[#396A4B] py-6 px-6 grid grid-cols-2 gap-y-3 gap-x-6 md:flex md:justify-center md:gap-10 md:px-4 text-sm underline">
 
         <span>Privacy Policy (GDPR + CCPA)</span>
         <span>Terms & Conditions</span>
         <span>Cookie Policy & Preferences</span>
         <span>Accessibility Statement (ADA/WCAG)</span>
-        <span>Modern Slavery & Human Rights</span>
-        <span>Anti-Bribery & Anti-Corruption</span>
+        <span className="hidden md:inline">Modern Slavery & Human Rights</span>
+        <span className="hidden md:inline">Anti-Bribery & Anti-Corruption</span>
 
       </div>
 

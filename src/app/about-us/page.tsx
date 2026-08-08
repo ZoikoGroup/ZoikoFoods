@@ -6,7 +6,6 @@ import Portfolio from "./components/Portfolio";
 import WhereWeOperate from "./components/WhereWeOperate";
 import Responsibility from "./components/Responsibility";
 import LookingAhead from "./components/LookingAhead";
-import InvestorRelations from "./components/InvestorRelations";
 
 export default function AboutPage() {
   return (
@@ -19,7 +18,6 @@ export default function AboutPage() {
       <WhereWeOperate />
       <Responsibility />
       <LookingAhead />
-      <InvestorRelations />
     </main>
   );
 }
