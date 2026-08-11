@@ -191,71 +191,71 @@ export default function Footer() {
 
       <div className="flex flex-col">
 
-      {/* Company Info */}
+        {/* Company Info */}
 
-      <div className="bg-[#396A4B] py-10 text-center px-4 order-2 md:order-1">
-
-
-        <h2 className="text-white text-2xl md:text-3xl font-bold font-[Georgia]">
-          Zoiko Foods Corp
-        </h2>
+        <div className="bg-[#396A4B] py-10 text-center px-4 order-2 md:order-1">
 
 
-        <p className="text-[#D79247] mt-4">
-          Feeding the Future — One Culture. One Table.
-        </p>
+          <h2 className="text-white text-2xl md:text-3xl font-bold font-[Georgia]">
+            Zoiko Foods Corp
+          </h2>
 
 
-        <p className="mt-6 font-bold text-sm">
-          HACCP | BRCGS | FDA | FSSAI | ISO 22000 | ISO 9001 | Fair Trade | Rainforest Alliance | ESG
-        </p>
+          <p className="text-[#D79247] mt-4">
+            Feeding the Future — One Culture. One Table.
+          </p>
 
 
-        <div className="flex justify-center gap-3 md:gap-4 mt-10 flex-wrap">
+          <p className="mt-6 font-bold text-sm">
+            HACCP | BRCGS | FDA | FSSAI | ISO 22000 | ISO 9001 | Fair Trade | Rainforest Alliance | ESG
+          </p>
 
 
-          {locations.map((location, index) => (
-            <button
-              key={index}
-              className={`px-4 md:px-5 py-2 md:py-3 rounded-lg text-sm md:text-base
+          <div className="flex justify-center gap-3 md:gap-4 mt-10 flex-wrap">
+
+
+            {locations.map((location, index) => (
+              <button
+                key={index}
+                className={`px-4 md:px-5 py-2 md:py-3 rounded-lg text-sm md:text-base
             ${index === 0
-                  ? "bg-[#D79247]"
-                  : "bg-white/10"
-                }`}
-            >
-              {location}
-            </button>
-          ))}
+                    ? "bg-[#D79247]"
+                    : "bg-white/10"
+                  }`}
+              >
+                {location}
+              </button>
+            ))}
+
+
+          </div>
 
 
         </div>
 
 
-      </div>
 
 
 
 
+        {/* Description */}
+
+        <div className="bg-[#396A4B] py-8 text-center px-4 order-1 md:order-2">
 
 
-      {/* Description */}
-
-      <div className="bg-[#396A4B] py-8 text-center px-4 order-1 md:order-2">
-
-
-        <p className="max-w-5xl mx-auto text-white text-base md:text-lg font-[Georgia] italic md:not-italic">
-          Zoiko Foods Corp. — A proud member of Zoiko Group Inc., delivering
-          world-class foods, beverages, and culinary innovation across continents.
-          Rooted in heritage. Committed to sustainability. Driven by excellence.
-        </p>
+          <p className="max-w-5xl mx-auto text-white text-base md:text-lg font-[Georgia] italic md:not-italic">
+            Zoiko Foods Corp. — A proud member of Zoiko Group Inc., delivering
+            world-class foods, beverages, and culinary innovation across continents.
+            Rooted in heritage. Committed to sustainability. Driven by excellence.
+          </p>
 
 
-        <div className="max-w-5xl mx-auto px-8 border-t-2 border-white mt-8 pt-5 text-sm">
-          © 2025 Zoiko Foods Corp. All rights reserved.
+          <div className="max-w-5xl mx-auto px-8 border-t-2 border-white mt-8 pt-5 text-sm">
+            © 2025 Zoiko Foods Corp. All rights reserved.
+          </div>
+
+
         </div>
-
-
-      </div>
 
       </div>
 
