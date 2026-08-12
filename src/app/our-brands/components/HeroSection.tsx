@@ -1,73 +1,62 @@
-"use client";
+import React from "react";
+
+const stats = [
+  { value: "6", label: "Core Brands" },
+  { value: "12+", label: "Markets Served" },
+  { value: "100%", label: "Authentic Caribbean" },
+];
 
 export default function HeroSection() {
   return (
-    <>
-      <style>{`
-        .hero-bg {
-          background: linear-gradient(135deg, #2D5A3D 0%, #D4A574 100%);
-        }
-        @media (min-width: 1024px) {
-          .hero-bg {
-            background: linear-gradient(114deg, #228B22 0%, #2D5A3D 50%, #D4A574 100%);
-          }
-        }
-      `}</style>
-      <section className="relative w-full overflow-hidden hero-bg">
-        <div className="mx-auto max-w-[1440px] min-h-[424px] lg:h-[424px] flex flex-col items-start lg:items-center justify-center px-6 py-12 lg:py-0">
-          
-          {/* Heading */}
-          <h1
-            className="w-full text-left lg:text-center text-white font-bold text-3xl lg:text-[43px] leading-tight lg:leading-[61px]"
-            style={{ fontFamily: "Georgia" }}
-          >
-            A Global House of Food Brands Built for Everyday Life
-          </h1>
+    <section
+      className="border-b border-solid px-6 py-12 text-center sm:px-10 lg:px-20 lg:py-20"
+      style={{
+        borderColor: "rgba(212,175,55,0.2)",
+        backgroundImage:
+          "linear-gradient(135deg, rgba(45,80,22,0.05) 0%, rgba(212,175,55,0.05) 100%)",
+      }}
+    >
+      <div className="mx-auto max-w-4xl">
+        <h1
+          className="mx-auto mb-[42px] bg-clip-text text-[40px] font-extrabold leading-[1.1] tracking-tight text-transparent lg:text-[64px] lg:leading-[102.4px]"
+          style={{
+            backgroundImage: "linear-gradient(123deg, rgb(26,51,9) 0%, rgb(45,80,22) 100%)",
+          }}
+        >
+          <span className="lg:hidden">
+            Our Brand
+            <br />
+            Portfolio
+          </span>
+          <span className="hidden lg:inline">Our Brand Portfolio</span>
+        </h1>
+        <p className="mx-auto mb-[45px] max-w-2xl text-[20.8px] leading-[35.36px] text-[#2C2C2C]">
+          Authentic Caribbean food brands bringing flavor, culture, and wellness to communities
+          across the globe
+        </p>
 
-          {/* Description */}
-          <p
-            className="mt-6 w-full text-left lg:text-center text-white/90 text-base lg:text-[20px] leading-relaxed lg:leading-[32px]"
-            style={{ fontFamily: "Georgia" }}
-          >
-            From QSR and prepared foods to beverages, baked goods, pantry essentials, and private-label solutions —<br className="hidden lg:inline" />
-            Zoiko Foods Corp builds, owns, and scales trusted food brands across global markets.
-          </p>
-
-          {/* Features */}
-          <div
-            className="mt-8 flex flex-col items-start lg:flex-row lg:items-center lg:justify-center gap-3 lg:gap-8 uppercase text-white"
-            style={{
-              fontFamily: "Segoe UI",
-              fontSize: "15px",
-              fontWeight: 600,
-              letterSpacing: "0.08em",
-              lineHeight: "24px",
-            }}
-          >
-            <span className="flex items-center gap-2" style={{ fontFamily: "Georgia", fontSize: "15px", fontWeight: 400 }}>
-              <span className="text-[24px] leading-[0] pt-1 lg:hidden">•</span> Multi-Category FMCG Portfolio
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="text-[24px] leading-[0] pt-1">•</span> Retail, Foodservice & Export Ready
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="text-[24px] leading-[0] pt-1">•</span> Brand-Governed · Quality-Led · Scalable
-            </span>
-          </div>
-
-          {/* Buttons */}
-          <div className="mt-10 flex flex-col lg:flex-row justify-center gap-4 lg:gap-6 w-full lg:w-auto">
-            <button className="h-14 w-full lg:w-auto rounded-none lg:rounded-lg bg-[#D4A574] px-6 lg:px-10 text-lg font-bold text-white transition hover:opacity-90">
-              Explore Our Brand Portfolio
-            </button>
-
-            <button className="h-14 w-full lg:w-auto rounded-none lg:rounded-lg bg-white text-[#2D5A3D] border-none lg:bg-transparent lg:text-white lg:border-2 lg:border-white px-6 lg:px-10 text-lg font-bold transition lg:hover:bg-white lg:hover:text-[#2D5A3D]">
-              Retail &amp; Private-Label Solutions
-            </button>
-          </div>
-
+        <div className="grid grid-cols-2 gap-y-8 lg:flex lg:items-start lg:justify-center lg:gap-16">
+          {stats.map((stat, idx) => (
+            <div
+              key={stat.label}
+              className={idx === 2 ? "col-span-2" : undefined}
+            >
+              <p
+                className="bg-clip-text text-[40px] font-extrabold leading-[64px] text-transparent"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(120deg, rgb(34,139,34) 0%, rgb(45,90,61) 50%, rgb(212,165,116) 100%), linear-gradient(120deg, rgb(184,148,30) 0%, rgb(212,175,55) 100%)",
+                }}
+              >
+                {stat.value}
+              </p>
+              <p className="mt-[6px] text-[15.2px] font-semibold leading-[24.32px] text-[#8B8B8B]">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

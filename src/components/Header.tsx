@@ -10,7 +10,7 @@ export default function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about-us", label: "About Us" },
-    { href: "/our-brands", label: "Our Brands" },
+    { href: "/our-brands", label: "Our Brand Portfolio" },
     { href: "/heritage", label: "Heritage & Roots" },
     { href: "/culinary-journal", label: "Culinary Journal" },
     { href: "/distribution", label: "Distribution" },

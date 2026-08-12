@@ -7,7 +7,7 @@ export default function Footer() {
       links: [
         { label: "About Us", href: "/about-us" },
         { label: "Heritage & Roots", href: "#" },
-        { label: "Our Brands", href: "/our-brands" },
+        { label: "Our Brand Portfolio", href: "/our-brands" },
         { label: "Exclusive Distributorships", href: "#" },
         { label: "Culinary Journal", href: "/culinary-journal" },
       ],
@@ -268,10 +268,12 @@ export default function Footer() {
       <div className="bg-[#396A4B] py-6 px-6 grid grid-cols-2 gap-y-3 gap-x-6 md:flex md:justify-center md:gap-10 md:px-4 text-sm underline">
 
         <span>Privacy Policy (GDPR + CCPA)</span>
-        <span>Terms & Conditions</span>
+        <Link href="/terms&conditions">Terms & Conditions</Link>
         <span>Cookie Policy & Preferences</span>
         <span>Accessibility Statement (ADA/WCAG)</span>
-        <span className="hidden md:inline">Modern Slavery & Human Rights</span>
+        <Link href="/modern-slavery&human-rights" className="hidden md:inline">
+          Modern Slavery & Human Rights
+        </Link>
         <span className="hidden md:inline">Anti-Bribery & Anti-Corruption</span>
 
       </div>
