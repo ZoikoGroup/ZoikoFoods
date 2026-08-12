@@ -57,7 +57,7 @@ export default function GrowthRoadmap() {
               );
 
               const card = (
-                <div className="flex-1 rounded-lg bg-white p-5 shadow-[0px_4px_6px_rgba(0,0,0,0.10)] md:min-w-[700px] md:p-8">
+                <div className="w-full rounded-lg bg-white p-5 shadow-[0px_4px_6px_rgba(0,0,0,0.10)] md:p-8">
                   <h3
                     className="mb-3 text-[18px] font-bold leading-7 text-[#2D5A3D] md:mb-4 md:text-[20px] md:leading-8"
                     style={{ fontFamily: "Georgia" }}
@@ -76,41 +76,41 @@ export default function GrowthRoadmap() {
               const isLast = index === roadmap.length - 1;
 
               return (
-                <div key={item.year}>
-                  {/* Mobile: single alternating row. Desktop: two-column grid. */}
-                  {item.side === "left" ? (
-                    <>
-                      <div className="flex items-center gap-4 md:hidden">
+                <div key={item.year} className="flex flex-col items-center w-full">
+                  {/* Mobile Layout */}
+                  <div className="flex w-full items-center gap-4 md:hidden">
+                    {item.side === "left" ? (
+                      <>
                         {badge}
                         {card}
-                      </div>
-                      <div className="hidden md:grid md:grid-cols-2 md:gap-8">
-                        <div className="flex items-center justify-end gap-8">
-                          {badge}
-                          {card}
-                        </div>
-                        <div />
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div className="flex items-center gap-4 md:hidden">
+                      </>
+                    ) : (
+                      <>
                         {card}
                         {badge}
-                      </div>
-                      <div className="hidden md:grid md:grid-cols-2 md:gap-8">
-                        <div />
-                        <div className="flex items-center justify-start gap-8">
-                          {card}
-                          {badge}
-                        </div>
-                      </div>
-                    </>
-                  )}
+                      </>
+                    )}
+                  </div>
+
+                  {/* Desktop Layout: Centered Card with Alternating Badges */}
+                  <div 
+                    className={`hidden md:flex relative w-full max-w-[500px] lg:max-w-[700px] items-center justify-center transition-transform ${
+                      item.side === "left" ? "md:translate-x-8 lg:translate-x-16" : "md:-translate-x-8 lg:-translate-x-16"
+                    }`}
+                  >
+                    {card}
+                    <div
+                      className={`absolute top-1/2 -translate-y-1/2 ${
+                        item.side === "left" ? "-left-[112px] lg:-left-[128px]" : "-right-[112px] lg:-right-[128px]"
+                      }`}
+                    >
+                      {badge}
+                    </div>
+                  </div>
 
                   {/* Divider segment — only between rows, never after the last one */}
                   {!isLast && (
-                    <div className="relative h-10 md:h-12">
+                    <div className="relative h-10 md:h-12 w-full">
                       <div className="absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-[#2D5A3D]" />
                     </div>
                   )}

@@ -1,19 +1,25 @@
 import HeroSection from "./components/HeroSection";
-import BrandArchitectureOverview from "./components/BrandArchitectureOverview";
-import MasterBrandPortfolio from "./components/MasterBrandPortfolio";
-import PrivateLabelManufacturing from "./components/PrivateLabelManufacturing";
-import BrandGovernance from "./components/BrandGovernance";
-import CommercialEntryPoints from "./components/CommercialEntryPoints";
+import QSRRestaurantBrands from "./components/QSRRestaurantBrands";
+import CondimentsSauces from "./components/CondimentsSauces";
+import Beverages from "./components/Beverages";
+import DistributionSupply from "./components/DistributionSupply";
+import CTASection from "./components/CTASection";
+
+export const metadata = {
+  title: "Our Brand Portfolio | Zoiko Foods Corp",
+  description:
+    "Authentic Caribbean food brands bringing flavor, culture, and wellness to communities across the globe.",
+};
 
 export default function OurBrandsPage() {
   return (
-    <main>
+    <main className="min-h-screen bg-white">
       <HeroSection />
-      <BrandArchitectureOverview />
-      <MasterBrandPortfolio />
-      <PrivateLabelManufacturing />
-      <BrandGovernance />
-      <CommercialEntryPoints />
+      <QSRRestaurantBrands />
+      <CondimentsSauces />
+      <Beverages />
+      <DistributionSupply />
+      <CTASection />
     </main>
   );
 }
