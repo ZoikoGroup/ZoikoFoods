@@ -11,9 +11,9 @@ const items: BulletItem[] = [
 ];
 
 const badges: Badge[] = [
-  { text: "🇺🇸 USA", type: "flag" },
-  { text: "🇨🇦 Canada", type: "flag" },
-  { text: "🇬🇧 UK", type: "flag" },
+  { text: "🇺🇸 USA", type: "flag-alt" },
+  { text: "🇨🇦 Canada", type: "flag-alt" },
+  { text: "🇬🇧 UK", type: "flag-alt" },
   { text: "All Natural", type: "descriptor" },
   { text: "Heritage Recipes", type: "descriptor" },
   { text: "Family-Owned", type: "descriptor" },
@@ -25,7 +25,7 @@ export default function CondimentsSauces() {
       <div className="mx-auto max-w-[1336px]">
         <CategoryHeader icon="🌶️" title="Condiments & Seasonings" />
 
-        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[repeat(auto-fill,424px)]">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[repeat(auto-fill,424px)]">
           <BrandCard
             name="La Caribbean Taste"
             tagline="Be Inspired By Taste"

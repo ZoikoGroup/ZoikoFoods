@@ -24,7 +24,7 @@ export default function DistributionSupply() {
       <div className="mx-auto max-w-[1336px]">
         <CategoryHeader icon="🚛" title="Distribution & Supply Services" />
 
-        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[repeat(auto-fill,424px)]">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[repeat(auto-fill,424px)]">
           <BrandCard
             name="Zoiko Supply Group"
             tagline="AI-Powered Global Trade & Supply Chain"
