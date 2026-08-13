@@ -1,21 +1,14 @@
 import React from "react";
 
 const stats = [
-  { value: "6", label: "Core Brands" },
-  { value: "12+", label: "Markets Served" },
-  { value: "100%", label: "Authentic Caribbean" },
+  { value: "5", label: "Continents" },
+  { value: "12+", label: "Restaurant Brands" },
+  { value: "100%", label: "Authentic Ingredients" },
 ];
 
 export default function HeroSection() {
   return (
-    <section
-      className="border-b border-solid px-6 py-12 text-center sm:px-10 lg:px-20 lg:py-20"
-      style={{
-        borderColor: "rgba(212,175,55,0.2)",
-        backgroundImage:
-          "linear-gradient(135deg, rgba(45,80,22,0.05) 0%, rgba(212,175,55,0.05) 100%)",
-      }}
-    >
+    <section className="px-6 py-12 text-center sm:px-10 lg:px-20 lg:py-20">
       <div className="mx-auto max-w-4xl">
         <h1
           className="mx-auto mb-[42px] bg-clip-text text-[40px] font-extrabold leading-[1.1] tracking-tight text-transparent lg:text-[64px] lg:leading-[102.4px]"

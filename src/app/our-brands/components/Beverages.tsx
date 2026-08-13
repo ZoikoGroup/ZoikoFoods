@@ -35,7 +35,7 @@ export default function Beverages() {
       <div className="mx-auto max-w-[1336px]">
         <CategoryHeader icon="🥤" title="Beverages" />
 
-        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[repeat(auto-fill,424px)]">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[repeat(auto-fill,424px)]">
           <BrandCard
             name="GingerNoxx"
             tagline="Caribbean Wellness in Every Sip"

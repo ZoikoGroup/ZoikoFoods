@@ -48,7 +48,7 @@ export default function QSRRestaurantBrands() {
           }
         />
 
-        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[repeat(auto-fill,424px)]">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[repeat(auto-fill,424px)]">
           <BrandCard
             name="NoxxChicken"
             tagline="Bold Afro-Caribbean Fried Chicken & Flavors"

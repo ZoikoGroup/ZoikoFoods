@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function OurBrandsPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#F9F6F0]">
       <HeroSection />
       <QSRRestaurantBrands />
       <CondimentsSauces />

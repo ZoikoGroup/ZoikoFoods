@@ -6,9 +6,9 @@ export default function Footer() {
       title: "About Zoiko Foods",
       links: [
         { label: "About Us", href: "/about-us" },
-        { label: "Heritage & Roots", href: "#" },
+        { label: "Heritage & Roots", href: "/heritage" },
         { label: "Our Brand Portfolio", href: "/our-brands" },
-        { label: "Exclusive Distributorships", href: "#" },
+        { label: "Exclusive Distributorships", href: "/exclusive-distributorships" },
         { label: "Culinary Journal", href: "/culinary-journal" },
       ],
     },
@@ -18,6 +18,7 @@ export default function Footer() {
         { label: "Investor Relations", href: "/investor-relation" },
         { label: "Partnership Opportunities", href: "/partnership" },
         { label: "Become a Distributor", href: "/become-a-distributor" },
+        { label: "Retail & Private-Label Solutions", href: "/retail-private-label-solutions" },
         { label: "Global Suppliers & Farmers", href: "/global-suppliers" },
         { label: "Corporate Governance Portal", href: "/governance-portal" },
         { label: "Whistleblower Policy", href: "/whistleblower-policy" },
@@ -39,7 +40,7 @@ export default function Footer() {
         { label: "Contact Us", href: "/contact-us" },
         { label: "Careers", href: "/careers" },
         { label: "FAQ & Consumer Care", href: "/faqs&customer-support" },
-        { label: "Media & Press Inquiries", href: "#" },
+        { label: "Media & Press Inquiries", href: "/media-press-inquiries" },
       ],
     },
   ];
@@ -267,14 +268,16 @@ export default function Footer() {
 
       <div className="bg-[#396A4B] py-6 px-6 grid grid-cols-2 gap-y-3 gap-x-6 md:flex md:justify-center md:gap-10 md:px-4 text-sm underline">
 
-        <span>Privacy Policy (GDPR + CCPA)</span>
+        <Link href="/privacy-policy">Privacy Policy (GDPR + CCPA)</Link>
         <Link href="/terms&conditions">Terms & Conditions</Link>
-        <span>Cookie Policy & Preferences</span>
-        <span>Accessibility Statement (ADA/WCAG)</span>
+        <Link href="/cookie-policy&preferences">Cookie Policy & Preferences</Link>
+        <Link href="/accessibility-statement">Accessibility Statement (ADA/WCAG)</Link>
         <Link href="/modern-slavery&human-rights" className="hidden md:inline">
           Modern Slavery & Human Rights
         </Link>
-        <span className="hidden md:inline">Anti-Bribery & Anti-Corruption</span>
+        <Link href="/anti-bribery&anti-corruption-policy" className="hidden md:inline">
+          Anti-Bribery & Anti-Corruption
+        </Link>
 
       </div>
 

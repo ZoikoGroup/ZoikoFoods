@@ -20,7 +20,7 @@ export default function CTASection() {
           href="/contact-us"
           className="inline-block rounded-lg bg-[#D79247] px-10 py-4 text-[17.6px] font-semibold leading-[28.16px] text-white shadow-[0px_4px_8px_rgba(212,175,55,0.3)] transition hover:opacity-90"
         >
-          Contact Our Team →
+          CONTACT US
         </a>
       </div>
     </section>
