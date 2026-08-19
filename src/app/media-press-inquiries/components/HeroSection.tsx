@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import { Check } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const GOLD = "#C8A35F";
 
@@ -18,6 +21,8 @@ function Pill({ children }: { children: React.ReactNode }) {
 }
 
 export default function HeroSection() {
+  const router = useRouter();
+
   return (
     <section
       style={{ backgroundImage: "linear-gradient(135deg, #0F2818 0%, #1A472A 100%)" }}
@@ -35,6 +40,7 @@ export default function HeroSection() {
             Verified facts and structured processes — designed for accuracy and accountability
           </p>
           <button
+            onClick={() => router.push("/media-press-inquiries/submit")}
             className="mb-12 rounded px-8 py-4 bg-white text-base font-semibold text-[#1A472A] transition hover:bg-gray-100"
           >
             Submit a Media Enquiry
